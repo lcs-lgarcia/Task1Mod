@@ -9,18 +9,31 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack{
+            Image("Cloud")
+                .resizable()
+                .frame(width: 900,height: 900)
+                .ignoresSafeArea()
+            
+            VStack{
+                Text("Hamilton")
+                    .foregroundColor(Color.white)
+                Text("4°")
+                    .foregroundColor(Color.white)
+                HStack{
+                    Text("H:5°")
+                        .foregroundColor(Color.white)
+                    Text("L:1°")
+                        .foregroundColor(Color.white)
+                }
+            }
+            
         }
-        .padding()
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
 }
